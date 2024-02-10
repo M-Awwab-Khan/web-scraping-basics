@@ -8,5 +8,5 @@ titles = [item.text for item in soup.select('.listicleItem_listicle-item__title_
 titles.reverse()
 with open('movies.txt', 'w') as f:
     for title in titles:
-        f.write(title)
+        f.write(f"{title}\n")
 
