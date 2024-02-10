@@ -6,5 +6,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 titles = [item.text for item in soup.select('.listicleItem_listicle-item__title__BfenH')]
 titles.reverse()
-for title in titles:
-    print(title)
+with open('movies.txt', 'w') as f:
+    for title in titles:
+        f.write(title)
+
